@@ -1,0 +1,158 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html,body{
+    transition: o.4s;
+}
+:root {
+    --cor1: #050505;
+    --cor2: #bbb;
+    --cor3: #f8f1f1;
+    --corbtnler: #0605fe;
+}
+input[type="checkbox"]{
+    display: none;
+}
+#modos {
+   text-decoration: none;
+}
+
+.dark, .dark-header{
+background-color: var(--cor1);
+color: white;
+}
+.dark nav{
+    box-shadow: 1px 1px 4px #f8f1f1;
+
+}
+.dark nav>a{ color: #f8f1f1;}
+.dark .bi-sun{
+    display: none;
+}
+.dark .bi-moon{
+    display: block;
+}
+/*fim modo dark*/
+nav {
+   align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+    display: flex;
+    gap: 1em;
+    padding: 1em 0;
+    box-shadow: 1px 1px 9px rgb(0, 0, 0);
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+nav>a{color: #000;
+    display: inline-block;
+    text-decoration: none;
+   
+}
+.bi{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.bi-moon{
+    display: none;
+}
+main {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 3em;
+}
+
+article {
+    box-shadow: 1px 2px 12px rgb(0, 0, 0);
+    width: 90%;
+    max-width: 90vh;
+    border-radius: 10px;
+    background-color: var(--cor2);
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 5em auto 0;
+}
+
+article > h1 {
+    flex-wrap: nowrap;
+    background-color: grey;
+    padding-bottom: 11px;
+    padding-top: 9px;
+}
+
+article > p {
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: justify;
+    margin-bottom: 20px;
+    text-indent: 20px;
+}
+
+article > .ler {
+    color: #050505;
+    display: block;
+    width: fit-content;
+    margin: 1em auto 0;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+    border: 1px solid var(--corbtnler);
+    
+    text-decoration: none;
+}
+
+.ler >a{
+    text-decoration: none;
+    color: rgb(20, 20, 20);
+    
+}
+article>.ler:hover , .ler>a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: var(--corbtnler);
+}
+.ler>a:hover{ color: white;}
+.text {
+    display: inline-flex;
+
+}
+
+footer {
+    color: white;
+    background-color: var(--cor1);
+    text-align: center;
+    padding: 1em;
+    margin: 0px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        text-align: center;
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    article {
+        width: 95%;
+        margin-top: 2em;
+    }
+
+    article > p {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .ler {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
